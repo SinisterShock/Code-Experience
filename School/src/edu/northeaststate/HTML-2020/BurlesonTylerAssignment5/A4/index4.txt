@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Assignment 3</title>
+<meta charset="utf-8">
+</head>
+<body>
+<p>
+Assignment 4 
+Due Date: 3/25/21 
+Tyler Burleson 
+CITC1300I02
+</p>
+<h1>Background Color Assignment</h1>
+<nav>
+<ul>
+   <li><a href="Color/A4Color.html">Hexadecimal</a></li>
+   <li><a href="External/A4External.html">External Background CSS</a></li>
+   <li><a href="Internal/A4Internal.html">Internal Background CSS</a></li>
+</ul>
+</nav>
+</body>
+</html>
