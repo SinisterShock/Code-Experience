@@ -1,0 +1,97 @@
+html,body {
+    background-size: 100% 100%;
+    margin: 0px;
+    padding: 0px;
+    height: 100%;
+    width: 100%;
+    
+    display: flex;
+    flex-direction: column;
+  }
+  
+  body > * {
+    flex-shrink: 0;
+    text-align: center;
+    color:white;
+    font-family: "proxima-nova-condensed",sans-serif;
+  }
+  
+  nav#header {
+    background: #00937f;;
+    position: fixed;
+    font-size: 20px;
+    height: 10%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    top: 0;
+    margin-bottom: 20px;
+    justify-content: flex-start;
+  }
+
+  nav#header img{
+    height: 100%;
+  }
+
+  nav#header a{
+    border-right: 2px solid;
+    border-color: white;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5%;
+    text-decoration: none;
+    color:white;
+  }
+
+  nav#header h1{
+    margin: 3%;
+  }
+  
+  div#frontbar {
+    padding-bottom: 5%;
+    width: 80%;
+    margin-top: 10%;
+    margin-left: 10%;
+    margin-right: 10%;
+    background-color: #002D3F;
+    border: 0px;
+    border-radius: 10px;
+    min-height: 50%;
+  }
+  
+  div#frontbar > *{
+    text-align: center;
+  }
+
+table{
+  width: 90%;
+  border:1;
+  margin: 0 auto;
+  margin-top: 2%;
+  text-align: left;
+  background-color: white;
+  color: #002D3F;
+}
+
+th{
+  text-align: left;
+}
+
+table, th, td{
+  border: 1px solid black;
+  border-collapse: collapse;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+div#login {
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  color:#002D3F;
+  padding: 10px;
+  margin: 0 auto;
+  margin-top: 10%;
+  width: 200px;
+}

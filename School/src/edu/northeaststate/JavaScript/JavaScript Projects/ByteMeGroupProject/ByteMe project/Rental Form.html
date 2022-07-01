@@ -1,0 +1,99 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Rental Sheet</title>
+	<link rel="stylesheet" href="JDMDesign.css">
+</head>
+
+<body>
+	<ul>
+		<li><a href="../index.html">Home Page</a></li>
+		<li><a class="active" href="CarSelection.html">New Rental</a></li>
+		<li><a href="VisualInventory.html">Inventory Preview</a></li>
+		<li><a href="InventoryList.html">Inventory Spreadsheet</a></li>
+		
+	</ul>
+	
+	
+	<h2>Rent A Ride</h2>
+	<!--Fieldset for Personal Information & selected rental period to be used in a receipt --> 
+	<fieldset>
+		<legend>Personal Information</legend>
+		
+	<form action="JDMRentalReceipt.html">
+		<label for="fname">Full Name:</label><br>
+		<input type="text" id="fname" name="fname"><br>
+		
+		<label for="birthDate">Date of Birth:</label><br>
+		<input type="date" id="birthDate" name="birthDate" value="2000-01-01" max="2000-12-31"><br>
+		
+		<label for="address">Address:</label><br>
+		<input type="text" id="address" name="address"><br>
+		
+		<label for="zip">Zip Code:</label><br>
+		<input type="text" id="zip" name="zip"><br>
+		
+		<label for="city">City:</label><br>
+		<input type="text" id="city" name="city"><br>
+		
+		<label for="state">State Initial:</label><br>
+		<input type="text" id="state" name="state"><br>
+		
+		<label for="rentalPeriod">How Many Days(EX: "5")</label><br>
+		<input type="text" id="rentalPeriod" name="rentalPeriod"><br>
+		
+		<label for="rentStart">Rental Start Date:</label><br>
+		<input type="date" id="rentStart" name="rentStart" value="2022-01-01" min="2022-01-01"><br>
+		
+		<label for="rentEnd">Rental End Date:</label><br>
+		<input type="date" id="rentEnd" name="rentEnd" value="2022-01-02" min="2022-01-02"><br>
+		
+	<p>Vehicle: </p>	
+	<p id="carName"></p>
+	
+		<input class="button2" type="submit" value="submit" onClick="dataGrab()">
+		</form>
+	</fieldset>
+	
+</body>
+	<script>
+		var carName = localStorage.getItem("carName");
+		var rentPrice = localStorage.getItem("rentPrice");
+		var insurancePrice = localStorage.getItem("insurancePrice");
+		
+		document.getElementById("carName").innerHTML=carName;
+		document.getElementById("rentPrice").innerHTML=rentPrice;
+		document.getElementById("insurancePrice").innerHTML=insurancePrice;
+		
+		function dataGrab() {
+			// store in JS variable
+			var fName = document.getElementById("fname").value;
+			var birthDate = document.getElementById("birthDate").value;
+			var address = document.getElementById("address").value;
+			var zip = document.getElementById("zip").value;
+			var city = document.getElementById("city").value;
+			var stateInit = document.getElementById("state").value;
+			
+			var rentalPeriod = document.getElementById("rentalPeriod").value;
+			var rentStart = document.getElementById("rentStart").value;
+			var rentEnd = document.getElementById("rentEnd").value;
+			
+			
+			
+			// Save values into local storage for receipt
+			localStorage.setItem("fnameValue", fName);
+			localStorage.setItem("birthDateValue", birthDate);
+			localStorage.setItem("addressValue", address);
+			localStorage.setItem("zipValue", zip);
+			localStorage.setItem("cityValue", city);
+			localStorage.setItem("stateValue", stateInit);
+			
+			localStorage.setItem("rentalPeriod", rentalPeriod);
+			localStorage.setItem("rentStartValue", rentStart);
+			localStorage.setItem("rentEndValue", rentEnd);
+			
+			
+		}
+	</script>
+</html>

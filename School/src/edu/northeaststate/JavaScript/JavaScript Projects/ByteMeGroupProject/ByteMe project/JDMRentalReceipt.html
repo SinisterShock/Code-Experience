@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>JDMRentalReceipt</title>
+	<link rel="stylesheet" href="JDMDesign.css">
+</head>
+<body>
+	<ul>
+		<li><a href="../index.html">Home Page</a></li>
+		<li><a clas="active" href="CarSelection.html">New Rental</a></li>
+		<li><a href="VisualInventory.html">Inventory Preview</a></li>
+		<li><a href="InventoryList.html">Inventory Spreadsheet</a></li>
+		
+	</ul>
+	<h1>Receipt</h1>
+	<fieldset>
+		<legend>Receipt</legend>
+		
+	<p class="receipt" id="currentDate"></p>
+	<p class="receipt" id="fname"></p>
+	<p class="receipt" id="birthDate"></p>
+	<p class="receipt" id="fullAddress"></p>
+	<p class="receipt" id="rentalPeriodDate"></p>
+	<p class="receipt" id="carName"></p>
+	<p class="receipt" id="rentPrice"></p>
+	<p class="receipt" id="insurancePrice"></p>
+	<p class="receipt" id="totalPrice"></p>
+		
+	</fieldset>
+	
+	
+</body>
+	<script>
+		var fname = localStorage.getItem("fnameValue");
+		var birthDate = localStorage.getItem("birthDateValue");
+		var address = localStorage.getItem("addressValue");
+		var zip = localStorage.getItem("zipValue");
+		var	city =localStorage.getItem("cityValue");
+		var state = localStorage.getItem("stateValue");
+		var rentalPeriod = parseInt(localStorage.getItem("rentalPeriod"));
+		var rentStartValue = localStorage.getItem("rentStartValue");
+		var rentEndValue = localStorage.getItem("rentEndValue");
+		
+		var carName = localStorage.getItem("carName");
+		var rentPrice = parseInt(localStorage.getItem("rentPrice"));
+		var insurancePrice =parseInt(localStorage.getItem("insurancePrice"));
+		
+		var totalPrice = (rentalPeriod * rentPrice) + (rentalPeriod * insurancePrice);
+		
+		const d = new Date();
+		var day = d.getDay();
+		var month= d.getMonth();
+		var year = d.getFullYear();
+		var hour = d.getHours();
+		var minutes = d.getMinutes();
+		
+		document.getElementById("currentDate").innerHTML = "Date: " + year + "-" + month + "-" + day + " " + hour + ":" + minutes;
+		document.getElementById("rentPrice").innerHTML="RENTAL PRICE: $" + rentPrice + "/day";
+		document.getElementById("insurancePrice").innerHTML="INSURANCE PRICE: $"+ insurancePrice + "/day";
+		document.getElementById("totalPrice").innerHTML= "TOTAL: $" + totalPrice;
+		
+		document.getElementById("fname").innerHTML=fname;
+		document.getElementById("fullAddress").innerHTML=address + "<br>" + city + ", " + state + " " + zip;
+		document.getElementById("carName").innerHTML="Vehicle: " + carName;
+		document.getElementById("rentalPeriodDate").innerHTML="Rental Start: " + rentStartValue + "<br>Rental End: " + rentEndValue;
+		
+		
+		
+		
+	</script>
+</html>

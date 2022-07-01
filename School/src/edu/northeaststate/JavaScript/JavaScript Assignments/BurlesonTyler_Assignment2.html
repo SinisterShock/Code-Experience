@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h4> Assignment 2- Tyler Burleson</h4>
+<h4>Variable Arithmatic </h4>
+
+<p id="gradeStart"></p>
+<p id="homework"></p>
+<p id="final"></p>
+
+<script>
+var hw = 95;
+var ex1 = 92;
+var ex2 = 78;
+var ex3 = 88;
+
+var ePercent = .8;
+var hPercent = .2;
+
+var examAvg = (ex1 + ex2 + ex3) / 3;
+
+var hwFinal = hw * hPercent;
+var eFinal = examAvg * ePercent;
+var finalGrade = eFinal + hwFinal;
+
+document.getElementById("gradeStart").innerHTML = "The exam grades are: " + ex1 + ", " + ex2 + ", " + ex3;
+document.getElementById("homework").innerHTML = "The Homework average grade is: " + hw;
+document.getElementById("final").innerHTML = "Bob's final grade is: " + finalGrade + "%";
+ 
+</script>
+
+</body> 
+</html>

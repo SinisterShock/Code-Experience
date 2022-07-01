@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h2>Exam 1-Tyler Burleson</h2>
+<h3>Question 5</h3>
+
+<p id="gradesDemo"></p>
+<p id="averagePrint"></p>
+
+<script>
+var attendance = prompt("Enter your attendance grade", "Ex: 95");
+var homework = prompt("Enter your homework grade", "Ex: 75");
+var quiz = prompt("Enter your quiz grade", "Ex: 89");
+var midterm = prompt("Enter your midterm grade", "Ex: 92");
+var finalExam = prompt("Enter your final exam grade", "Ex: 78");
+var group = prompt("Enter your group project grade", "Ex: 79");
+
+var average = Math.round((attendance * .1) + (homework * .1) + (quiz * .1) + (midterm * .25) + (finalExam * .2) + (group * .2));
+
+document.getElementById("gradesDemo").innerHTML = "Attendance: " + attendance + "%" + "<br>" + "Homework: " + homework + "%" + "<br>" + "Quiz: " + quiz + "%" + "<br>" + "Midterm: " + midterm + "%" + "<br>" + "Final Exam: " + finalExam + "%" + "<br>" + "Group Project: " + group + "%" + "<br>" ;
+if (attendance != null && homework != null && quiz != null && midterm != null && finalExam != null){
+document.getElementById("averagePrint").innerHTML = "Your grade is: " + average + "%" ;
+}
+</script>
+
+
+</body>
+</html>

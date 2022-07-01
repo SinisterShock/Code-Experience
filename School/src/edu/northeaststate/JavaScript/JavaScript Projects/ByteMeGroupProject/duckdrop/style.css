@@ -1,0 +1,37 @@
+body{
+    text-align: center;
+    background-image: url("images/background_image.jpg");
+    background-repeat: repeat;
+}
+.container{
+    background-color: rgba(255, 255, 255, 0.75);
+    width: 750px;
+    position: relative;
+    left: 375px;
+    top: -10px;
+}
+h1{
+    margin: 0px;
+}
+img{
+    width: 250px;
+    height: 250px;
+}
+.store_item{
+    width: 750px;
+    height: 250px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 20px;
+}
+.store_item_details{
+    width: 500px;
+    text-align: left;
+    padding: 10px;
+}
+.store_item_details, div{
+    padding: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+}

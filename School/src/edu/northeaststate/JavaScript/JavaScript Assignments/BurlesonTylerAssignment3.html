@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h4>Assignment 3 - Tyler Burleson</h4>
+<h4>Functions - Painting a Dome</h4>
+
+<p id="demo2"></p>
+<p id="demo"></p>
+<p id="demo3"></p>
+
+<script>
+function myfunction(p1) {
+	return (4 * 3.14 * (p1 ** 2)) / 2
+}
+// 15700 / 150 = gallons
+// gallons = 104.66666666666667 of paint -> need 105 cans
+
+var text1 = "Radius = 50 feet";
+var text2 = "Surface area = ";
+var price = 105 * 25;
+
+document.getElementById("demo2").innerHTML = text1 
+document.getElementById("demo3").innerHTML = "104.666... gallons of paint, so 105 cans of paint = $" + price;
+document.getElementById("demo").innerHTML = text2 + myfunction(50) + " square feet";
+
+</script>
+
+</body> 
+</html>

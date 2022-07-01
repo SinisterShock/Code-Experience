@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h2>Exercise 14-Tyler Burleson</h2>
+<p>A time based greeting</p>
+
+
+
+<p id="demo"></p>
+
+
+<script>
+const hour = new Date().getHours();
+let greeting;
+
+if (hour < 12) {
+	greeting = "Good Morning";
+} else if(hour > 12 && hour < 17) {
+	greeting = "Good afternoon";
+}else {
+	greeting = "Good evening";
+}
+
+document.getElementById("demo").innerHTML = greeting;
+</script>
+
+
+</body>
+</html>

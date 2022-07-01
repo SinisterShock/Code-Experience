@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h2>Assignment 7-Tyler Burleson</h2>
+<h2>Exam Questions</h2>
+<br>
+<h3>Easy-using 3 variables display your name,class sections, and school name or acronym using concatination("Name-Section-School")</h3>
+<p id="q1"></p>
+<br>
+<h3>Medium-Using an object display what phone you have(Ex: Android, Motorola, Droid Z, Pink)</h3>
+<p id="q2"></p>
+<br>
+<h3>Hard-Using user input, ask them to enter the radius of a sphere and display the area</h3>
+<button onclick="myFunction()">Hit Me!</button>
+<p id="q3"></p>
+
+<script>
+// Question 1
+var myName = "Tyler Burleson";
+var section = "WEBT 2300 B02";
+var school = "NESCC"
+
+document.getElementById("q1").innerHTML = myName + "-" + section + "-" + school;
+
+// Question 2
+const phone = {type:"Android", company:"Samsung", model:"Galaxy S20", color:"Purple"};
+document.getElementById("q2").innerHTML = "I have a " + phone.color + " " + phone.type + " " + phone.company + " " + phone.model;
+
+// Question 3
+
+function myFunction(){
+var input = prompt("Enter the radius of a sphere in inches");
+var area = 4*3.14* (input**2);
+if (input != null){
+document.getElementById("q3").innerHTML = "The area of your sphere is: " + area + " in^2"; }
+}
+
+
+</script>
+</body>
+</html>
+ 

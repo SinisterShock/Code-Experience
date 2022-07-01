@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h2>Exercise 15-Tyler Burleson</h2>
+<p>Switch</p>
+
+
+
+<p id="demo"></p>
+
+
+<script>
+let monthCase;
+switch (new Date().getMonth()){
+	case 0:
+	monthCase = "January";
+	break;
+	case 1:
+	monthCase = "February";
+	break;
+	case 2:
+	monthCase = "March";
+	break;
+	case 3:
+	monthCase = "April";
+	break;
+	case 4:
+	monthCase = "May";
+	break;
+	case 5:
+	monthCase = "June";
+	break;
+	case 6:
+	monthCase = "July";
+	break;
+	case 7:
+	monthCase = "August";
+	break;
+	case 8:
+	monthCase = "September";
+	break;
+	case 9:
+	monthCase = "October";
+	break;
+	case 10:
+	monthCase = "November";
+	break;
+	case 11:
+	monthCase = "December";
+	break;
+	}
+	document.getElementById("demo").innerHTML = "The month is " + monthCase;
+</script>
+
+
+</body>
+</html>

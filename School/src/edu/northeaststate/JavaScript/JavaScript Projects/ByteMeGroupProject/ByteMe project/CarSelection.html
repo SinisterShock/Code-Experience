@@ -1,0 +1,513 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>CarSelection</title>
+	<link rel="stylesheet" href="JDMDesign.css">
+</head>
+<body>
+	<ul>
+		<li><a href="../index.html">Home Page</a></li>
+		<li><a class="active" href="CarSelection.html">New Rental</a></li>
+		<li><a href="VisualInventory.html">Inventory Preview</a></li>
+		<li><a href="InventoryList.html">Inventory Spreadsheet</a></li>
+		
+	</ul>
+	
+	<h1>Select a Vehicle</h1>
+	
+	<div class="container1">
+		<img src="Images/Acura_NSX.jpg" alt="Acura NSX" style="width:200px; height:150px;">
+		<p class="size" id="acura"></p>
+		<button class="button" id="nsxSelect">Rent Me</button>
+	</div>
+	<br>
+	<div class="container1">
+		<img src="Images/Honda_Prelude.jpg" alt="Honda Prelude" style="width:200px; height:150px;">
+		<p class="size" id="prelude"></p>
+		<button class="button" id="preludeSelect">Rent Me</button>
+	</div>
+	<br>
+	<div class="container1">
+		<img src="Images/Honda_S2000.jpg" alt="Honda S2000 Type S" style="width:200px; height:150px;">
+		<p class="size" id="s2000"></p>
+		<button class="button" id="s2000Select">Rent Me</button>
+	</div>
+	<br>
+	<div class="container1">
+		<img src="Images/Mazda_RX7.jpg" alt="Mazda RX-7" style="width:200px; height:150px;">
+		<p class="size" id="mazda"></p>
+		<button class="button" id="mazdaSelect">Rent Me</button>
+	</div>
+	<br>
+	<div class="container1">
+		<img src="Images/Mitsubishi_EvoVII.jpg" alt="Mitsubishi Lancer Evolution VII" style="width:200px; height:150px;">
+		<p class="size" id="evo7"></p>
+	<button class="button" id="evo7Select">Rent Me</button>
+	</div>
+	<br>
+	<div class="container1">
+		<img src="Images/Mitsubishi_EvoX.jpg" alt="Mitsubishi Lancer Evolution X" style="width:200px; height:150px;">
+		<p class="size" id="evoX"></p>
+		<button class="button" id="evoXSelect">Rent Me</button>
+	</div>
+	<br>
+	<div class="container1">
+		<img src="Images/Nissan_Silvia.jpg" alt="Nissan Silvia" style="width:200px; height:150px;">
+		<p class="size" id="silvia"></p>
+		<button class="button" id="silviaSelect">Rent Me</button>
+	</div>
+	<br>
+	<div class="container1">
+		<img src="Images/Nissan_Skyline.jpg" alt="Nissan Skyline" style="width:200px; height:150px;">
+		<p class="size" id="skyline"></p>
+		<button class="button" id="skylineSelect">Rent Me</button>
+	</div>
+	<br>
+	<div class="container1">
+		<img src="Images/Subaru_WRX.jpg" alt="Subaru WRX STI" style="width:200px; height:150px;">
+		<p class="size" id="wrx"></p>
+		<button class="button" id="wrxSelect">Rent Me</button>
+	</div>
+	<br>
+	<div class="container1">
+		<img src="Images/Toyota_HiAce.jpeg" alt="Toyota HiAce" style="width:200px; height:150px;">
+		<p class="size" id="hiAce"></p>
+		<button class="button" id="hiAceSelect">Rent Me</button>
+	</div>
+	<br>
+	<div class="container1">
+		<img src="Images/Toyota_Hilux.jpg" alt="Toyota Hilux" style="width:200px; height:150px;">
+		<p class="size" id="hilux"></p>
+		<button class="button" id="hiluxSelect">Rent Me</button>
+	</div>
+	<br>
+	<div class="container1">
+		<img src="Images/Toyota_Supra.jpg" alt="Toyota Supra RZ" style="width:200px; height:150px;">
+		<p class="size" id="supra"></p>
+		<button class="button" id="supraSelect">Rent Me</button>
+	</div>
+	<br>
+	<div class="container1">
+		<img src="Images/Toyota_Trueno.jpg" alt="Toyota Trueno AE86" style="width:200px; height:150px;">
+		<p class="size" id="trueno"></p>
+		<button class="button" id="truenoSelect">Rent Me</button>
+	</div>
+	
+	<div class="column">
+		<div class="container2">
+			<p>Vehicle:</p>
+			<p id="carName"></p>
+		</div>
+		<div class="container2">
+			<p>Rental Price:</p>
+			<p id="rentPrice"></p>
+		</div>
+		<div class="container2">
+			<p>Insurance Price:</p>
+			<p id="insurancePrice"></p>
+		</div>
+	</div>
+	<form action="Rental Form.html">
+	
+	<input class="button2" type="submit" value="submit">
+	
+	</form>
+	
+</body>
+	<script>
+		document.getElementById("acura").innerHTML = "Acura NSX-[Automatic] <br>High Sport Package: $125/day";
+		document.getElementById("prelude").innerHTML = "Honda Prelude-[Manual] <br>High Sport Package: $125/day";
+		document.getElementById("s2000").innerHTML = "Honda S2000 Type S-[Automatic] <br>High Sport Package: $125/day";
+		document.getElementById("mazda").innerHTML = "Mazda RX-7 FD3S-[Manual] <br>High Sport Package: $125/day";
+		document.getElementById("evo7").innerHTML = "Mitsubishi Lancer Evolution VII RS-[Automatic] <br>Low Sport Package: $105/day";
+		document.getElementById("evoX").innerHTML = "Mitsubishi Lancer Evolution X-[Automatic] <br>Low Sport Package: $105/day";
+		document.getElementById("silvia").innerHTML = "Nissan Silvia S15-[Manual] <br>High Sport Package: $125/day";
+		document.getElementById("skyline").innerHTML = "Nissan Skyline GT-R R34-[Manual] <br>High Sport Package: $125/day";
+		document.getElementById("wrx").innerHTML = "Subaru Impreza WRX STI-[Automatic] <br>Low Sport Package: $105/day";
+		document.getElementById("hiAce").innerHTML = "Toyota HiAce-[Automatic] <br>Utility Package: $150/day";
+		document.getElementById("hilux").innerHTML = "Toyota Hilux Surf SSR-X-[Automatic] <br>Utility Package $150/day";
+		document.getElementById("supra").innerHTML = "Toyota Supra RZ-[Manual] <br>High Sport Package: $125/day";
+		document.getElementById("trueno").innerHTML = "Toyota Trueno AE86-[Manual] <br>Low Sport Package: $105/day";
+		
+		document.getElementById("nsxSelect").addEventListener("click", nsxSelect);
+		function nsxSelect(){
+			//set the name
+			var carName = "Acura NSX";
+			document.getElementById("carName").innerHTML= carName;
+			
+			//ask for insurance
+			var text;
+			var insuranceQuestion = prompt("Would you like handler insurance? $20/day", "\"YES\" or \"NO\"");
+			switch(insuranceQuestion){
+			case "YES":
+			text = 20;
+			break;
+			case "NO":
+			text = 0;
+			break;
+			}
+			document.getElementById("insurancePrice").innerHTML = text;
+			
+			//set price
+			var rentPrice = 125;
+			document.getElementById("rentPrice").innerHTML= rentPrice;
+			
+			localStorage.setItem("carName", carName);
+			localStorage.setItem("rentPrice", rentPrice);
+			localStorage.setItem("insurancePrice", text);
+			
+		}
+	
+		document.getElementById("preludeSelect").addEventListener("click", preludeSelect);
+		function preludeSelect(){
+			//set the name
+			var carName = "Honda Prelude";
+			document.getElementById("carName").innerHTML= carName;
+			
+			//ask for insurance
+			var text;
+			var insuranceQuestion = prompt("Would you like handler insurance? $20/day", "\"YES\" or \"NO\"");
+			switch(insuranceQuestion){
+			case "YES":
+			text = 20;
+			break;
+			case "NO":
+			text = 0;
+			break;
+			}
+			document.getElementById("insurancePrice").innerHTML = text;
+			
+			//set price
+			var rentPrice = 125;
+			document.getElementById("rentPrice").innerHTML= rentPrice;
+			
+			localStorage.setItem("carName", carName);
+			localStorage.setItem("rentPrice", rentPrice);
+			localStorage.setItem("insurancePrice", text);
+			
+		}
+		
+		document.getElementById("s2000Select").addEventListener("click", s2000Select);
+		function s2000Select(){
+			//set the name
+			var carName = "Honda S2000 Type S";
+			document.getElementById("carName").innerHTML= carName;
+			
+			//ask for insurance
+			var text;
+			var insuranceQuestion = prompt("Would you like handler insurance? $20/day", "\"YES\" or \"NO\"");
+			switch(insuranceQuestion){
+			case "YES":
+			text = 20;
+			break;
+			case "NO":
+			text = 0;
+			break;
+			}
+			document.getElementById("insurancePrice").innerHTML = text;
+			
+			//set price
+			var rentPrice = 125;
+			document.getElementById("rentPrice").innerHTML= rentPrice;
+			
+			localStorage.setItem("carName", carName);
+			localStorage.setItem("rentPrice", rentPrice);
+			localStorage.setItem("insurancePrice", text);
+			
+		}
+		
+		document.getElementById("mazdaSelect").addEventListener("click", mazdaSelect);
+		function mazdaSelect(){
+			//set the name
+			var carName = "Mazda RX-7 FD3S";
+			document.getElementById("carName").innerHTML= carName;
+			
+			//ask for insurance
+			var text;
+			var insuranceQuestion = prompt("Would you like handler insurance? $20/day", "\"YES\" or \"NO\"");
+			switch(insuranceQuestion){
+			case "YES":
+			text = 20;
+			break;
+			case "NO":
+			text = 0;
+			break;
+			}
+			document.getElementById("insurancePrice").innerHTML = text;
+			
+			//set price
+			var rentPrice = 125;
+			document.getElementById("rentPrice").innerHTML= rentPrice;
+			
+			localStorage.setItem("carName", carName);
+			localStorage.setItem("rentPrice", rentPrice);
+			localStorage.setItem("insurancePrice", text);
+			
+		}
+		
+		document.getElementById("evo7Select").addEventListener("click", evo7Select);
+		function evo7Select(){
+			//set the name
+			var carName = "Mitsubishi Lancer Evolution VII RS";
+			document.getElementById("carName").innerHTML= carName;
+			
+			//ask for insurance
+			var text;
+			var insuranceQuestion = prompt("Would you like handler insurance? $20/day", "\"YES\" or \"NO\"");
+			switch(insuranceQuestion){
+			case "YES":
+			text = 20;
+			break;
+			case "NO":
+			text = 0;
+			break;
+			}
+			document.getElementById("insurancePrice").innerHTML = text;
+			
+			//set price
+			var rentPrice = 105;
+			document.getElementById("rentPrice").innerHTML= rentPrice;
+			
+			localStorage.setItem("carName", carName);
+			localStorage.setItem("rentPrice", rentPrice);
+			localStorage.setItem("insurancePrice", text);
+			
+		}
+		
+		document.getElementById("evoXSelect").addEventListener("click", evoXSelect);
+		function evoXSelect(){
+			//set the name
+			var carName = "Mitsubishi Lancer Evolution X";
+			document.getElementById("carName").innerHTML= carName;
+			
+			//ask for insurance
+			var text;
+			var insuranceQuestion = prompt("Would you like handler insurance? $20/day", "\"YES\" or \"NO\"");
+			switch(insuranceQuestion){
+			case "YES":
+			text = 20;
+			break;
+			case "NO":
+			text = 0;
+			break;
+			}
+			document.getElementById("insurancePrice").innerHTML = text;
+			
+			//set price
+			var rentPrice = 105;
+			document.getElementById("rentPrice").innerHTML= rentPrice;
+			
+			localStorage.setItem("carName", carName);
+			localStorage.setItem("rentPrice", rentPrice);
+			localStorage.setItem("insurancePrice", text);
+			
+		}
+		
+		document.getElementById("silviaSelect").addEventListener("click", silviaSelect);
+		function silviaSelect(){
+			//set the name
+			var carName = "Nissan Silvia S15";
+			document.getElementById("carName").innerHTML= carName;
+			
+			//ask for insurance
+			var text;
+			var insuranceQuestion = prompt("Would you like handler insurance? $20/day", "\"YES\" or \"NO\"");
+			switch(insuranceQuestion){
+			case "YES":
+			text = 20;
+			break;
+			case "NO":
+			text = 0;
+			break;
+			}
+			document.getElementById("insurancePrice").innerHTML = text;
+			
+			//set price
+			var rentPrice = 125;
+			document.getElementById("rentPrice").innerHTML= rentPrice;
+			
+			localStorage.setItem("carName", carName);
+			localStorage.setItem("rentPrice", rentPrice);
+			localStorage.setItem("insurancePrice", text);
+			
+		}
+		
+		
+		document.getElementById("skylineSelect").addEventListener("click", skylineSelect);
+		function skylineSelect(){
+			//set the name
+			var carName = "Nissan Skyline GT-R R34";
+			document.getElementById("carName").innerHTML= carName;
+			
+			//ask for insurance
+			var text;
+			var insuranceQuestion = prompt("Would you like handler insurance? $20/day", "\"YES\" or \"NO\"");
+			switch(insuranceQuestion){
+			case "YES":
+			text = 20;
+			break;
+			case "NO":
+			text = 0;
+			break;
+			}
+			document.getElementById("insurancePrice").innerHTML = text;
+			
+			//set price
+			var rentPrice = 125;
+			document.getElementById("rentPrice").innerHTML= rentPrice;
+			
+			localStorage.setItem("carName", carName);
+			localStorage.setItem("rentPrice", rentPrice);
+			localStorage.setItem("insurancePrice", text);
+			
+		}
+		
+		document.getElementById("wrxSelect").addEventListener("click", wrxSelect);
+		function wrxSelect(){
+			//set the name
+			var carName = "Subaru WRX STI";
+			document.getElementById("carName").innerHTML= carName;
+			
+			//ask for insurance
+			var text;
+			var insuranceQuestion = prompt("Would you like handler insurance? $20/day", "\"YES\" or \"NO\"");
+			switch(insuranceQuestion){
+			case "YES":
+			text = 20;
+			break;
+			case "NO":
+			text = 0;
+			break;
+			}
+			document.getElementById("insurancePrice").innerHTML = text;
+			
+			//set price
+			var rentPrice = 105;
+			document.getElementById("rentPrice").innerHTML= rentPrice;
+			
+			localStorage.setItem("carName", carName);
+			localStorage.setItem("rentPrice", rentPrice);
+			localStorage.setItem("insurancePrice", text);
+			
+		}
+		
+		document.getElementById("hiAceSelect").addEventListener("click", hiAceSelect);
+		function hiAceSelect(){
+			//set the name
+			var carName = "Toyota HiAce";
+			document.getElementById("carName").innerHTML= carName;
+			
+			//ask for insurance
+			var text;
+			var insuranceQuestion = prompt("Would you like handler insurance? $20/day", "\"YES\" or \"NO\"");
+			switch(insuranceQuestion){
+			case "YES":
+			text = 20;
+			break;
+			case "NO":
+			text = 0;
+			break;
+			}
+			document.getElementById("insurancePrice").innerHTML = text;
+			
+			//set price
+			var rentPrice = 150;
+			document.getElementById("rentPrice").innerHTML= rentPrice;
+			
+			localStorage.setItem("carName", carName);
+			localStorage.setItem("rentPrice", rentPrice);
+			localStorage.setItem("insurancePrice", text);
+			
+		}
+		
+		document.getElementById("hiluxSelect").addEventListener("click", hiluxSelect);
+		function hiluxSelect(){
+			//set the name
+			var carName = "Toyota Hilux Surf SSR-X";
+			document.getElementById("carName").innerHTML= carName;
+			
+			//ask for insurance
+			var text;
+			var insuranceQuestion = prompt("Would you like handler insurance? $20/day", "\"YES\" or \"NO\"");
+			switch(insuranceQuestion){
+			case "YES":
+			text = 20;
+			break;
+			case "NO":
+			text = 0;
+			break;
+			}
+			document.getElementById("insurancePrice").innerHTML = text;
+			
+			//set price
+			var rentPrice = 150;
+			document.getElementById("rentPrice").innerHTML= rentPrice;
+			
+			localStorage.setItem("carName", carName);
+			localStorage.setItem("rentPrice", rentPrice);
+			localStorage.setItem("insurancePrice", text);
+			
+		}
+		
+		document.getElementById("supraSelect").addEventListener("click", supraSelect);
+		function supraSelect(){
+			//set the name
+			var carName = "Toyota Supra RZ";
+			document.getElementById("carName").innerHTML= carName;
+			
+			//ask for insurance
+			var text;
+			var insuranceQuestion = prompt("Would you like handler insurance? $20/day", "\"YES\" or \"NO\"");
+			switch(insuranceQuestion){
+			case "YES":
+			text = 20;
+			break;
+			case "NO":
+			text = 0;
+			break;
+			}
+			document.getElementById("insurancePrice").innerHTML = text;
+			
+			//set price
+			var rentPrice = 125;
+			document.getElementById("rentPrice").innerHTML= rentPrice;
+			
+			localStorage.setItem("carName", carName);
+			localStorage.setItem("rentPrice", rentPrice);
+			localStorage.setItem("insurancePrice", text);
+			
+		}
+		
+		document.getElementById("truenoSelect").addEventListener("click", truenoSelect);
+		function truenoSelect(){
+			//set the name
+			var carName = "Toyota Trueno AE86";
+			document.getElementById("carName").innerHTML= carName;
+			
+			//ask for insurance
+			var text;
+			var insuranceQuestion = prompt("Would you like handler insurance? $20/day", "\"YES\" or \"NO\"");
+			switch(insuranceQuestion){
+			case "YES":
+			text = 20;
+			break;
+			case "NO":
+			text = 0;
+			break;
+			}
+			document.getElementById("insurancePrice").innerHTML = text;
+			
+			//set price
+			var rentPrice = 105;
+			document.getElementById("rentPrice").innerHTML= rentPrice;
+			
+			localStorage.setItem("carName", carName);
+			localStorage.setItem("rentPrice", rentPrice);
+			localStorage.setItem("insurancePrice", text);
+			
+		}
+		
+		
+	</script>
+</html>

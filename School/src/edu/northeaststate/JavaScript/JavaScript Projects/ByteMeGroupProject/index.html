@@ -1,0 +1,129 @@
+<html>
+
+<head>
+<style>
+div.scrollmenu {
+  background-color: #333;
+  overflow: auto;
+  white-space: nowrap;
+}
+
+div.scrollmenu a {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+}
+
+div.scrollmenu a:hover {
+  background-color: #777;
+}
+</style>
+</head>
+
+<body>
+<div class="scrollmenu">
+  <a href="ByteMe project/VisualInventory.html">JDM Rentals-Tyler</a>
+  <a href="GroupProject/index.html">Paul's Reusables</a>
+  <a href="Issac's/schidstalls.html">Schid Stalls</a>
+  <a href="duckdrop/duckdrop.html">Duck Drop</a>
+</div>
+<h2 id="time"></h2>
+<h2>Welcome to Byte_Me Incorporated!</h2>
+<p>Byte_Me Incorporated is a business founded by Tyler Burleson, Paul Basler, Isaac Duncan, and Terry McCulley. 
+The group of college programming students sought out a way to sell various products curated throughout themselves 
+before deciding to split it into several shops each owned by a member dedicated to their chosen product.</p>
+<hr>
+	
+<h1>Quiz</h1>
+	<h3>Please answer with a capital corresponding to the correct choice</h3>
+	<p>Question 1: What is the team name?</p>
+	<ol type="A">
+		<li>ByteMe</li>
+		<li>C00L Ranch D0r1t0 Crumb$</li>
+		<li>WaterMelon Soda</li>
+		<li>That one kid band</li>
+	</ol>
+	<input type="text" id="question1">
+	<p>Question 2: which of the following is best to build a web application?</p>
+	<ol type="A">
+		<li>Python</li>
+		<li>Javascript</li>
+		<li>Pearl</li>
+		<li>MySQL</li>
+	</ol>
+	<input type="text" id="question2">
+	<p>Question 3: What does an array hold?</p>
+	<ol type="A">
+		<li>A basket of eggs</li>
+		<li>Form Actions</li>
+		<li>Variables</li>
+		<li>Cookies</li>
+	</ol>
+	<input type="text" id="question3">
+	<p>Question 4: What time does this class start?</p>
+	<ol type="A">
+		<li>2:00 PM</li>
+		<li>10:30 AM</li>
+		<li>2:00 AM</li>
+		<li>11:50 AM</li>
+	</ol>
+	<input type="text" id="question4">
+	
+	<p>Question 5: What is the tag that holds javascript</p>
+	<ol type="A">
+		<li>p</li>
+		<li>script</li>
+		<li>!doctype HTML</li>
+		<li>body</li>
+	</ol>
+	<input type="text" id="question5">
+	<p id="total"></p>
+	<button onclick="answerCheck()">Submit</button>
+<script>
+const time = new Date().getHours();
+let timemessage;
+if (time < 12) {
+  timemessage = "Good morning";
+} else if (time < 13) {
+  timemessage = "Good afternoon";
+} else if (time < 17){
+  timemessage = "Good afternoon";
+}
+else {
+  timemessage = "Good night!"
+}
+document.getElementById("time").innerHTML = timemessage;
+	function answerCheck(){
+		var total = 0;
+		var q1 = document.getElementById("question1").value;
+		var q2 = document.getElementById("question2").value;
+		var q3 = document.getElementById("question3").value;
+		var q4 = document.getElementById("question4").value;
+		var q5 = document.getElementById("question5").value;
+		
+		if(q1 == "A"){
+			total++;
+		}
+		if(q2 == "B"){
+			total++;
+		}
+		if(q3 == "C"){
+			total++;
+		}
+		if(q4 == "A"){
+			total++;
+		}
+		if(q5 == "B"){
+			total++;
+		}
+		document.getElementById("total").innerHTML = total + "/5";
+		
+	}
+	
+</script>
+
+</body>
+
+<html>

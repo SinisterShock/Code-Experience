@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h2>Assignment 8-Tyler Burleson</h2>
+<p>Grade Calculator</p>
+
+Exam 1
+<input type="text" placeholder="Ex: 75" id="exam1">
+<br>
+Exam 2
+<input type="text" placeholder="Ex: 75" id="exam2">
+<br>
+Exam 3
+<input type="text" placeholder="Ex: 75" id="exam3">
+<br>
+Exam 4
+<input type="text" placeholder="Ex: 75" id="exam4">    
+
+<button type="button" onclick="getGrade();">Get Grade</button>
+
+<p id="demo"></p>
+<p id="demo2"></p>
+
+
+<script>
+function getGrade(){
+var gradeAvg = 0;
+var letterGrade = "";
+var exam1 = parseInt(document.getElementById("exam1").value);
+var exam2 = parseInt(document.getElementById("exam2").value);
+var exam3 = parseInt(document.getElementById("exam3").value);
+var exam4 = parseInt(document.getElementById("exam4").value);
+
+gradeAvg = (exam1 + exam2 + exam3 + exam4)/4;
+if (gradeAvg >= 90){
+	letterGrade = "A";
+} else if(gradeAvg < 90 && gradeAvg >= 80){
+	letterGrade = "B";
+} else if(gradeAvg < 80 && gradeAvg >=70){
+	letterGrade = "C";
+} else if(gradeAvg < 70 && gradeAvg >=60){
+	letterGrade = "D";
+}else{
+	letterGrade = "F";
+}
+
+document.getElementById("demo").innerHTML = "Grade: " + gradeAvg;
+document.getElementById("demo2").innerHTML = "Letter: " + letterGrade;
+}
+
+
+</script>
+
+
+</body>
+</html>

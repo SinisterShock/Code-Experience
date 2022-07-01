@@ -1,0 +1,193 @@
+html,body{
+    height: 100%;
+}
+
+#hero-img img{
+    height: 300px;
+    width: 100%;
+}
+
+#wrapper{
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 100%;
+    background-color: white;
+    margin: 0 auto;
+    min-height: 100%;
+}
+
+#header{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    padding-left: 10px;
+    background-color: white;
+}
+
+#left-header{
+    display: grid;
+    background-color: white;
+
+}
+
+#header-nav{
+    max-width: 100%;
+    font-size: 30px;
+    padding: 10px 0 10px 10px;
+    margin: 0 0 20px -15px;
+    background-color: crimson;
+}
+
+textarea{
+    width: 250px;
+}
+
+#header-nav a{
+    padding: 5px 10px 5px 15px;
+    text-decoration: none;
+    color: white;
+}
+
+#header-nav a[href="#Products"]:active{
+    text-decoration: underline;
+}
+
+#right-header{
+    grid-row: 1;
+    display: grid;
+    background-color: white;
+    outline: black 2px;
+    grid-column: 2 / 3;
+}
+
+#header-main{
+    display: inline;
+    width: 100px;
+}
+
+.name{
+    color: crimson;
+}
+
+.rating{
+    background-color: black;
+    color: white;
+    font-size: 30px;
+    padding: 0 10px 0;
+    border-radius: 15px;
+    margin-bottom: 40px;
+    width: 180px;
+    grid-column: 2/3;
+}
+
+#store-name{
+    grid-column: 1 / 4;
+    grid-row: 1 / 2;
+    font-size: 40px;
+}
+
+#store-rating{
+    grid-column: 2 / 3;
+    grid-row:  2 / 3;
+}
+
+#store-rating span{
+    grid-column: 2 / 3;
+    font-size: 20px;
+}
+#content{
+    display: grid;
+    padding-left: 20px;
+    max-width: 100%;
+    margin-bottom: 30px;
+}
+
+#content-left{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 10% 10% 10% 10% 60%;
+}
+
+#content-right{
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    grid-template-rows: auto auto auto auto auto;
+    column-gap: 15px;
+    row-gap: 50px;
+}
+
+#content-right-image{
+    display: grid;
+    grid-template-columns: 50px auto;
+}
+
+#content-right-text{
+    padding: 0 0 0 10px;
+    text-transform: capitalize;
+}
+
+#content-right a{
+    text-decoration: none;
+    color: black;
+}
+
+.content-image{
+    width: 50px;
+}
+
+#about{
+    font-size: 30px;
+    text-align: justify;
+    margin: 20px auto;
+    width: 60%;
+}
+
+#contact{
+    border: 4px solid crimson;
+    margin: 0 auto 20px;
+    padding: 20px;
+    width: 30%;
+}
+
+#contact button{
+    margin-left: 270px;
+}
+
+#contact label{
+    display: inline-block;
+    width: 70px;
+}
+
+#cart{
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+#cart img{
+    column-span:1 / 2;
+    width: 15px;
+    margin: -10px 10px 0 0;
+    padding-top: 10px
+}
+
+#cart .cart-item{
+    display: grid;
+    grid-template-columns: 20px 100%;
+}
+
+#cart div div{
+    column-span: 2/3;
+}
+
+#footer{
+    display: grid;
+    grid-template-columns: auto;
+    background-color: crimson;
+    max-width: 100%;
+    grid-row: 3;
+}
+
+#footer a{
+    padding: 10px;
+    text-decoration-line: none;
+    color: white;
+}

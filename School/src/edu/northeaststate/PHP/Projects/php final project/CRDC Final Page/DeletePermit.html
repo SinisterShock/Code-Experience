@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DeletePermit</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a href="NewPermitAdmin.html">New Permit</a>
+<a href="DeletePermit.php">Delete Permit</a>
+<a href="ApprovalPermit.php">Approve a Permit</a>
+<a href="login.php">Log Out<a><br>
+
+<h1>Delete a Permit Request</h1>
+<table>
+    <th>Request ID</th>
+    <th>Submitted</th>
+    <th>Completed</th>
+    <th>Approval Status</th>
+    <th>User</th>
+    <th>Class</th>
+
+
+    <?php
+
+        $crud->dataview("SELECT * FROM Permit_Requests");
+    ?>
+</table>
+<form action="NewPermitAdmin.php" method="post">
+
+    <label for="requestid">Request ID:</label><br>
+    <input type="text" id="requestid" name="requestid"><br>
+
+
+    <input type="submit">
+</form>
+
+</body>
+</html>

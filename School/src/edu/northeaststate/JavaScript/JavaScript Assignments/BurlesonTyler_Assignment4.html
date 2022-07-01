@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<h4>Assignment 4- Tyler Burleson</h4>
+<h4>Events</h4>
+
+
+<h1>Fahrenheit to Celsius calculator</h1>
+<button onclick="calc()">Click to enter a temperature</button>
+<p id="demo"></p>
+
+<script>
+function calc() {
+	var temp = prompt("Enter your temperature in Fahrenheit");
+	if (temp != null){
+		document.getElementById("demo").innerHTML = "The Temperature is " + ((temp - 32)* 5/9) + " in celsius.";
+	}
+}
+	
+</script>
+
+
+	
+
+</body> 
+</html>
