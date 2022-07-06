@@ -1,5 +1,3 @@
-![Tyler, NESCC Grad Photo](Images/NESCC Grad Photo.jpeg)
-
 # **Tyler Burleson's Coding experience**
 ## This is a list of all my code I currently have since I started my education in 2020
 
