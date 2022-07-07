@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="xMidterm.SunriseSunset">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem x:Name="btnDelete" Text="Delete City" Clicked="btnDelete_Clicked"></ToolbarItem>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <StackLayout>
+            <Label x:Name="lblSunriseLocation" Text="" FontSize="36" FontAttributes="Bold" TextColor="Black"></Label>
+            <Label x:Name="lblSunrise" Text="" FontSize="20"></Label>
+            <Label x:Name="lblSunset" Text="" FontSize="20"></Label>
+            <Label x:Name="lblTwilightBegin" Text="" FontSize="20"></Label>
+            <Label x:Name="lblTwilightEnd" Text="" FontSize="20"></Label>
+            <Label x:Name="lblDayLength" Text="" FontSize="20"></Label>
+           
+                
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

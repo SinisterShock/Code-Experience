@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XSunriseSunset.CurrentConditions">
+    <ContentPage.Content>
+        <StackLayout>
+            
+            <Label x:Name="lblLocation" FontSize="Title" Padding="10, 20, 0, 10"/>
+            <Label x:Name="lblCondition" FontSize="Medium" Padding="10, 0, 0, 0"/>
+            <Label x:Name="lblCurrentTemperature"  FontSize="Medium" Padding="10, 0, 0, 0"/>
+            <Label x:Name="lblFeelsLike"  FontSize="Medium" Padding="10, 0, 0, 0"/>
+            <Label x:Name="lblMaxTemp"  FontSize="Medium" Padding="10, 0, 0, 0"/>
+            <Label x:Name="lblMinTemp"  FontSize="Medium" Padding="10, 0, 0, 0"/>
+            <Label x:Name="lblBarometric"  FontSize="Medium" Padding="10, 0, 0, 0"/>
+            <Label x:Name="lblHumidity"  FontSize="Medium" Padding="10, 0, 0, 0"/>
+            <Label x:Name="lblWindSpeed"  FontSize="Medium" Padding="10, 0, 0, 0"/>
+            <Label x:Name="lblWindDirections"  FontSize="Medium" Padding="10, 0, 0, 0"/>
+            <Label x:Name="lblWindGusts" FontSize="Medium" Padding="10, 0, 0, 0"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

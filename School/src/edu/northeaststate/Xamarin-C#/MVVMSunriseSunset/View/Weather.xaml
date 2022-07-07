@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:XSunriseSunset.ViewModels"
+             x:Class="XSunriseSunset.Weather">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <vm:WeatherViewModel x:Key="vm"/>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ContentPage.Content>
+        <StackLayout BindingContext="{StaticResource vm}" BackgroundColor="Aquamarine">
+
+            <Label Text="{Binding Name}" FontSize="Large" HorizontalOptions="CenterAndExpand" />
+            <!--<Image Source="{Binding ImageIcon}" HeightRequest="70"></Image>-->
+            <Label Text="{Binding Desc}" HorizontalOptions="CenterAndExpand" />
+            <Label Text="{Binding Temp}" HorizontalOptions="CenterAndExpand" />
+            <Label Text="{Binding FeelLike}" HorizontalOptions="CenterAndExpand" />
+            <Label Text="{Binding TempMax}" HorizontalOptions="CenterAndExpand" />
+            <Label Text="{Binding TempMin}" HorizontalOptions="CenterAndExpand" />
+            <Label Text="{Binding BarometricPressure}" HorizontalOptions="CenterAndExpand" />
+            <Label Text="{Binding Humidity}" HorizontalOptions="CenterAndExpand" />
+            <Label Text="{Binding WindSpeed}" HorizontalOptions="CenterAndExpand" />
+            <Label Text="{Binding WindDegrees}" HorizontalOptions="CenterAndExpand" />
+            <Label Text="{Binding WindGust}" HorizontalOptions="CenterAndExpand" />
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

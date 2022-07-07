@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="xMidterm.MainPage">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem x:Name="btnAddCity" Text="Add City" Clicked="btnAddCity_Clicked"></ToolbarItem>
+    </ContentPage.ToolbarItems>
+    
+    <StackLayout>
+
+        <ListView x:Name="lstLocations" ItemTapped="lstLocations_ItemTapped" Background="Lavender" Margin="10">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="{Binding name}" FontSize="16" TextColor="Black"></Label>
+                            <Label Text="{Binding lat}"></Label>
+                            <Label Text="{Binding lon}"></Label>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+    
+
+</ContentPage>
