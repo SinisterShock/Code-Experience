@@ -9,6 +9,8 @@
 - CSS
 - JavaScript
 - PHP
+- C#
+- Xamarin
 - MYSQL (Remnants of old assignments unfortunately lost)
 
 # Summary
