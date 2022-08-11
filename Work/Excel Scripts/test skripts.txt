@@ -1,0 +1,49 @@
+Sub ReplaceHyperlinks_Holzher()
+'Updateby Extendoffice
+Dim Ws As Worksheet
+Dim xHyperlink As Hyperlink
+Dim xOld As String, xNew As String
+Dim strSwap() As String
+Dim strSwapOld() As String
+xTitleId = "Hyperlink Exchange"
+
+
+ReDim strSwapOld(1 To 10)
+strSwapOld(1) = "https://docs.google.com/document/d/1j3U2CQk5zbY99ZpaZa0gZ3Ot-1MVQtMds68MSlmZx8A/edit"
+strSwapOld(2) = "https://docs.google.com/document/d/1p-JgCl-AGHTfH-7aRHqpPPBJZ7oxTvuFtFdOJk1J9Wg/edit"
+strSwapOld(3) = "https://docs.google.com/document/d/1g6V2h8a1BtePJZghzMmrhc1VNH8Wxvp3taLt57-Axrs/edit"
+strSwapOld(4) = "https://docs.google.com/document/d/1dtSmFG9Q6jKUlMoEJIjoH614ihxmINSgyGGlnrvvtJg/edit"
+strSwapOld(5) = "https://docs.google.com/document/d/1sUemWpaWHkkLqJZw2n9xDnj01naxltW7bv2VFMaq_pI/edit"
+strSwapOld(6) = "https://docs.google.com/document/d/1Neq-PkjupNT0siNtx7cJHeqpa9CtwnrYUToY4ss6kyY/edit"
+strSwapOld(7) = "https://docs.google.com/document/d/1uyTudU21-afFQCDJ20UTmp0Zqan62gCkmzvZ86oVMms/edit"
+strSwapOld(8) = "https://docs.google.com/document/d/1417kONKWxb4YFdGOV_9KfrrpluSzWtSgLhQUlsYmypg/edit"
+strSwapOld(9) = "https://docs.google.com/document/d/1LTQ1f491_LkiwoDaBF-Pun1ahGWKHuMCGwK48uE6l80/edit"
+strSwapOld(10) = "https://docs.google.com/document/d/1-lws-eUZpiRaluzqUbfKag88XZh7e0b8TFmjhWylUPs/edit"
+
+ReDim strSwap(1 To 10)
+strSwap(1) = "https://weinigtbb.sharepoint.com/:w:/r/sites/mcusatsholzherfs/Freigegebene%20Dokumente/Holzher%20Scheduling/Spreadsheet%20Data/Kitchen%20Refresh%20-%20Front%20Pin%20Option%20_%20Retrofit.docx?d=w73141cbbbb8a4ab0a8ec2514f4c9c9b1&csf=1&web=1&e=HKncTp"
+strSwap(2) = "https://weinigtbb.sharepoint.com/:w:/r/sites/mcusatsholzherfs/Freigegebene%20Dokumente/Holzher%20Scheduling/Spreadsheet%20Data/S%20%26%20S%20Products%20-%201308.docx?d=wda0e40d338344941a2047e46271e15e8&csf=1&web=1&e=vXNmMd"
+strSwap(3) = "https://weinigtbb.sharepoint.com/:w:/r/sites/mcusatsholzherfs/Freigegebene%20Dokumente/Holzher%20Scheduling/Spreadsheet%20Data/Builders%201st%20Parts%20Order%23%202254240+2254015.docx?d=we8e63d65c6344a74b18ec1c543053c35&csf=1&web=1&e=JVjyT7"
+strSwap(4) = "https://weinigtbb.sharepoint.com/:w:/r/sites/mcusatsholzherfs/Freigegebene%20Dokumente/Holzher%20Scheduling/Spreadsheet%20Data/5-axis%20Calibration%20Kit%20-%20T8006516.docx?d=w86ce5aedfcd2435fa342c92017aa503a&csf=1&web=1&e=Qkx8ZM"
+strSwap(5) = "https://weinigtbb.sharepoint.com/:w:/r/sites/mcusatsholzherfs/Freigegebene%20Dokumente/Holzher%20Scheduling/Spreadsheet%20Data/WO%204016135MB%20-%20Specialty%20Wood.docx?d=wd64d258f22e4417ea42f6118dd998d72&csf=1&web=1&e=hid9Sk"
+strSwap(6) = "https://weinigtbb.sharepoint.com/:w:/r/sites/mcusatsholzherfs/Freigegebene%20Dokumente/Holzher%20Scheduling/Spreadsheet%20Data/Precision%20Cabinets%20%26%20Trim%20-%207405.docx?d=w577a579973c04757aee3b6c59d63c4d7&csf=1&web=1&e=569bh8"
+strSwap(7) = "https://weinigtbb.sharepoint.com/:w:/r/sites/mcusatsholzherfs/Freigegebene%20Dokumente/Holzher%20Scheduling/Spreadsheet%20Data/Interior%20Env%205_31_2022.docx?d=w48f5eca357c042ad810a79f610bd2ea8&csf=1&web=1&e=bMe71Y"
+strSwap(8) = "https://weinigtbb.sharepoint.com/:w:/r/sites/mcusatsholzherfs/Freigegebene%20Dokumente/Holzher%20Scheduling/Spreadsheet%20Data/J%20%26%20C%20Custom%20Cabinets%20-%201308XL%20sn_%201740%205025884.docx?d=w2c3f4db92f964c8e84d055c660f2ae60&csf=1&web=1&e=SlU1lV"
+strSwap(9) = "https://weinigtbb.sharepoint.com/:w:/r/sites/mcusatsholzherfs/Freigegebene%20Dokumente/Holzher%20Scheduling/Spreadsheet%20Data/WO%2088025%20-%20Conestoga%20West.docx?d=wc61b65a1d8b34283a81835a9695d41b2&csf=1&web=1&e=gOstEF"
+strSwap(10) = "https://weinigtbb.sharepoint.com/:w:/r/sites/mcusatsholzherfs/Freigegebene%20Dokumente/Holzher%20Scheduling/Spreadsheet%20Data/WO%204016137%20-%20Closet%20Land%201054C%20Install.docx?d=wbc19a89d72c9437ab3b91b0d31d7b276&csf=1&web=1&e=0z23z8"
+
+
+Set Ws = Application.ActiveSheet
+Dim i As Integer
+For i = 1 To 10
+    xOld = strSwapOld(i)
+    xNew = strSwap(i)
+    For Each xHyperlink In Ws.Hyperlinks
+    xHyperlink.Address = Replace(xHyperlink.Address, xOld, xNew)
+Next
+Next
+
+End Sub
+
+
+
