@@ -11,6 +11,8 @@
 - PHP
 - C#
 - Xamarin
+- Batch Scripts
+- Excel Macro Scripts from VBA
 - MYSQL (Remnants of old assignments unfortunately lost)
 
 # Summary
