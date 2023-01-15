@@ -1,0 +1,57 @@
+<html>
+<head>
+    <title>Sinister 6Mans Leaderboard</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 80%;
+            margin: 0 auto;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center">Sinister 6Mans Leaderboard</h1>
+    <table id="leaderboard"></table>
+    <script>
+        // Read csv file
+        fetch("leaderboard.csv")
+            .then(response => response.text())
+            .then(data => {
+                // Convert csv data to 2D array
+                const rows = data.split("\n").slice(1);
+                const leaderboardData = rows.map(row => row.split(","));
+
+                // Get table element
+                const leaderboardTable = document.getElementById("leaderboard");
+
+                // Create table headers
+                const tableHead = leaderboardTable.createTHead();
+                const headRow = tableHead.insertRow();
+                const headings = ["Name", "Wins", "Losses"];
+                headings.forEach(heading => {
+                    const th = document.createElement("th");
+                    th.innerHTML = heading;
+                    headRow.appendChild(th);
+                });
+
+                // Create table rows
+                leaderboardData.forEach(rowData => {
+                    const row = leaderboardTable.insertRow();
+                    rowData.forEach(cellData => {
+                        const cell = row.insertCell();
+                        cell.innerHTML = cellData;
+                    });
+                });
+            });
+    </script>
+</body>
+</html>
