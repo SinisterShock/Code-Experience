@@ -10,6 +10,8 @@
 - JavaScript
 - PHP
 - C#
+- MongoDB
+- Unix
 - Xamarin
 - Batch Scripts
 - Excel Macro Scripts from VBA
