@@ -1,0 +1,15 @@
+Blountville({
+    "results": {
+        "sunrise": "11:09:34 AM",
+        "sunset": "11:55:05 PM",
+        "solar_noon": "5:32:19 PM",
+        "day_length": "12:45:31",
+        "civil_twilight_begin": "10:44:48 AM",
+        "civil_twilight_end": "12:19:51 AM",
+        "nautical_twilight_begin": "10:13:59 AM",
+        "nautical_twilight_end": "12:50:39 AM",
+        "astronomical_twilight_begin": "9:42:20 AM",
+        "astronomical_twilight_end": "1:22:18 AM"
+    },
+    "status": "OK"
+});

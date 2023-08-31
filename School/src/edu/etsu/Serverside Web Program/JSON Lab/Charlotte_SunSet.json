@@ -1,0 +1,15 @@
+Charlotte({
+    "results": {
+        "sunrise": "11:04:30 AM",
+        "sunset": "11:48:13 PM",
+        "solar_noon": "5:26:21 PM",
+        "day_length": "12:43:43",
+        "civil_twilight_begin": "10:40:10 AM",
+        "civil_twilight_end": "12:12:33 AM",
+        "nautical_twilight_begin": "10:09:55 AM",
+        "nautical_twilight_end": "12:42:48 AM",
+        "astronomical_twilight_begin": "9:38:55 AM",
+        "astronomical_twilight_end": "1:13:48 AM"
+    },
+    "status": "OK"
+});

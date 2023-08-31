@@ -1,0 +1,16 @@
+Bristol
+({
+    "results": {
+        "sunrise": "11:08:56 AM",
+        "sunset": "11:54:32 PM",
+        "solar_noon": "5:31:44 PM",
+        "day_length": "12:45:36",
+        "civil_twilight_begin": "10:44:09 AM",
+        "civil_twilight_end": "12:19:19 AM",
+        "nautical_twilight_begin": "10:13:18 AM",
+        "nautical_twilight_end": "12:50:10 AM",
+        "astronomical_twilight_begin": "9:41:38 AM",
+        "astronomical_twilight_end": "1:21:51 AM"
+    },
+    "status": "OK"
+});

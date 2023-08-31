@@ -1,0 +1,15 @@
+Mountain_City({
+    "results": {
+        "sunrise": "11:07:29 AM",
+        "sunset": "11:52:55 PM",
+        "solar_noon": "5:30:12 PM",
+        "day_length": "12:45:26",
+        "civil_twilight_begin": "10:42:44 AM",
+        "civil_twilight_end": "12:17:40 AM",
+        "nautical_twilight_begin": "10:11:57 AM",
+        "nautical_twilight_end": "12:48:27 AM",
+        "astronomical_twilight_begin": "9:40:20 AM",
+        "astronomical_twilight_end": "1:20:04 AM"
+    },
+    "status": "OK"
+});
