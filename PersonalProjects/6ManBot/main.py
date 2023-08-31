@@ -1,4 +1,4 @@
-# MTA2MzY3MjU5ODAzNjIyNjA1OA.Gc5EVb.Zb83DMaCoY6AoMRFjR2PQhfiBynG4JOgumDSXE
+
 import discord
 import random
 import csv
@@ -168,4 +168,4 @@ async def on_message(message):
                                    "- I was create by Sinister in January 2023\n"
                                    "- This is a personal bot built using python to be used to create random teams for 3v3 Rocket League.")
 
-client.run('MTA2MzY3MjU5ODAzNjIyNjA1OA.Gc5EVb.Zb83DMaCoY6AoMRFjR2PQhfiBynG4JOgumDSXE')
+client.run('API_KEY')
