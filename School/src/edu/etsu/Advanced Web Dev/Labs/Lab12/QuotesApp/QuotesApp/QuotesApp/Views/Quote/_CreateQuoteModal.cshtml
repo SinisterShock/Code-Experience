@@ -1,0 +1,45 @@
+﻿@using QuotesApp.Models.Entities;
+@{
+    var model = new Quote();
+}
+
+<div class="modal fade" id="createQuoteModal" tabindex="-1" role="dialog"
+     aria-labelledby="createQuoteModal" aria-hidden="true">
+
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div id="mainContent" class="modal-content">
+            <form id="#createQuoteForm" asp-action="Create">
+
+                <div class="modal-header">
+                    <h5 class="modalTitle" id="createQuoteModal">Create Quote</h5>
+                    <button type="button" class="btn-close"
+                            data-bs-dismiss="modal" aria-label="Close">
+                    </button>
+                </div>
+
+                <div class="modal-body">
+                    <div class="row mb-3 form-group">
+                        <label class="col-sm-2 col-form-label" id="TheQuote">TheQuote</label>
+                        <div class="col-sm-10">
+                            <input class="form-control" />
+                            <span id="TheQuote" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="row mb-3 form-group">
+                        <label class="col-sm-2 col-form-label" id="WhoSaidIt">WhoSaidIt</label>
+                        <div class="col-sm-10">
+                            <input class="form-control" />
+                            <span id="WhoSaidIt" class="text-danger"></span>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary">Save</button>
+                    <button type="reset" class="btn btn-secondary">Clear</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

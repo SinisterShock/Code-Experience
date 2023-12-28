@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\TBLW05ConsumeWebAPI.props" />
+</Project>

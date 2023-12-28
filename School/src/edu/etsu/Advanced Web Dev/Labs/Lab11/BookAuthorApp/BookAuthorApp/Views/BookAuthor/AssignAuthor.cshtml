@@ -1,0 +1,45 @@
+﻿@model IEnumerable<BookAuthorApp.Models.Entities.Author>
+
+@{
+    var book = (Book?)ViewData["Book"];
+    ViewData["Title"] = $"Select the author to assign to \'{book.Title}\'";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FirstName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LastName)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FirstName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LastName)
+            </td>
+            <td>
+                 <a asp-action="AssignToBook" asp-controller="BookAuthor" asp-route-id="@book.Id" asp-route-authorId="@item.Id">Assign</a>
+
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

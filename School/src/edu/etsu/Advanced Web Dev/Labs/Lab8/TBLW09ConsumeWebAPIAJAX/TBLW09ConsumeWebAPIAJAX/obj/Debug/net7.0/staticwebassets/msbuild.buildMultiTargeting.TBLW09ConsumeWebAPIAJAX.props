@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\TBLW09ConsumeWebAPIAJAX.props" />
+</Project>

@@ -1,0 +1,140 @@
+﻿@model IEnumerable<NewPartsGalore.Models.Entities.Product>
+
+@{
+    ViewData["Title"] = "Index";
+}
+<head>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .content-wrapper {
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 15px;
+            padding: 55px;
+        }
+
+        /* Style the table */
+        .table {
+            width: 100%;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+            .table th,
+            .table td {
+                padding: 0.75rem;
+                vertical-align: top;
+                border-top: 1px solid #dee2e6;
+            }
+
+            .table thead th {
+                vertical-align: bottom;
+                border-bottom: 2px solid #dee2e6;
+                background-color: #f8f9fa; /* Header background color */
+            }
+
+            /* Alternating row colors */
+            .table tbody tr:nth-of-type(odd) {
+                background-color: rgba(0, 0, 0, 0.05); /* Light gray background */
+            }
+
+            /* Hover effect on rows */
+            .table tbody tr:hover {
+                background-color: rgba(0, 0, 0, 0.075); /* Slightly darker background on hover */
+            }
+
+            /* Action links style */
+            .table a {
+                color: #007bff; /* Bootstrap primary link color */
+                text-decoration: none;
+            }
+
+                .table a:hover {
+                    text-decoration: underline;
+                }
+
+        .container {
+            display: flex;
+        }
+
+        .left-column {
+            flex: 1;
+            text-align: left;
+            vertical-align: bottom;
+        }
+
+        .right-column {
+            flex: 1;
+            vertical-align: bottom;
+            text-align: right;
+        }
+
+        
+
+
+
+    </style>
+
+</head>
+<div class="content-wrapper">
+    <h1 style="text-align: center">All Available Products</h1>
+
+    <div class="right-column">
+        <h3>
+            Add a new Product
+            <button class="btn btn-primary">
+                <a style="text-decoration: none; color: white" asp-action="Create" asp-controller="Product">New Product</a>
+            </button>
+        </h3>
+    </div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Id)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.SerialNumber)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Name)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Description)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Price)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Id)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.SerialNumber)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Description)
+                    </td>
+                    <td>
+                        @String.Format("{0:C}", item.Price)
+                    </td>
+                    <td>
+                        <button class="btn btn-success">
+                            <a style="text-decoration: none; color: white" asp-action="Details" asp-controller="Product" asp-route-id="@item.Id">Details</a>
+                        </button>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

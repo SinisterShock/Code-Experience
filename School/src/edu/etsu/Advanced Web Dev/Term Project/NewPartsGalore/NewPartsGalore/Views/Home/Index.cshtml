@@ -1,0 +1,109 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your New View</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <!-- Your custom CSS (if any) -->
+    <style>
+        .icon-box {
+            cursor: pointer;
+            transition: transform 0.3s;
+            text-decoration: none; /* Remove underline */
+            color: inherit; /* Inherit text color from the parent */
+        }
+
+            .icon-box:hover {
+                transform: scale(1.1);
+            }
+
+            .icon-box .card-body {
+                padding: 20px;
+            }
+
+        .content-wrapper {
+            background-color: #ffffff; /* Set the background color of the wrapper */
+            border-radius: 10px; /* Optional: Add border-radius for rounded corners */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add box shadow */
+            margin: 15px; /* Center the wrapper */
+            padding: 55px; /* Add padding for content inside the wrapper */
+            
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <div class="content-wrapper">
+        <h1 style="text-align: center" class="section-title">New Parts Galore</h1>
+        <h2 style="text-align: center" class="section-title">Admin Panel</h2>
+        <div class="container mt-5">
+            <div class="row">
+                <!-- Icon Box 1 -->
+                <div class="col-md-4 mb-3">
+                    <a style="text-decoration: none" asp-controller="Vendor" asp-action="Index" class="card text-center icon-box bg-success">
+                        <div class="card-body" style="color: white">
+                            <i class="fas fa-dolly-flatbed fa-3x mb-3" ></i>
+                            <h5 class="card-title">Vendors</h5>
+                            <p class="card-text" >Access and edit all available vendors.</p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Icon Box 2 -->
+                <div class="col-md-4 mb-3">
+                    <a style="text-decoration: none" asp-controller="User" asp-action="Index" class="card text-center icon-box bg-info">
+                        <div class="card-body" style="color: white">
+                            <i class="fas fa-users fa-3x mb-3"></i>
+                            <h5 class="card-title">Users</h5>
+                            <p class="card-text">Access and edit all employeed users.</p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Icon Box 3 -->
+                <div class="col-md-4 mb-3">
+                    <a style="text-decoration: none" asp-controller="Location" asp-action="Index" class="card text-center icon-box bg-warning">
+                        <div class="card-body" style="color: white">
+                            <i class="fas fa-map-marker-alt fa-3x mb-3"></i>
+                            <h5 class="card-title">Locations</h5>
+                            <p class="card-text">Access and edit all locations.</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-md-6 mb-4">
+                    <a style="text-decoration: none" asp-controller="Product" asp-action="Index" class="card text-center icon-box bg-danger">
+                        <div class="card-body" style="color: white">
+                            <i class="fas fa-shopping-basket fa-3x mb-3"></i>
+                            <h5 class="card-title">Products</h5>
+                            <p class="card-text">Access and edit all products.</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <a style="text-decoration: none" asp-controller="Bundle" asp-action="Index" class="card text-center icon-box bg-success">
+                        <div class="card-body" style="color: white">
+                            <i class="fas fa-box-open fa-3x mb-3"></i>
+                            <h5 class="card-title">Bundles</h5>
+                            <p class="card-text">Access and edit all bundles.</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.6/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+

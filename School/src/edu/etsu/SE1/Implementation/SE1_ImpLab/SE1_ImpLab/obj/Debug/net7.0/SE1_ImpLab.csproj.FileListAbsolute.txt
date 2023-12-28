@@ -1,0 +1,15 @@
+C:\Users\saint\Desktop\Files\etsu\SE1\Implementation\SE1_ImpLab\SE1_ImpLab\bin\Debug\net7.0\SE1_ImpLab.exe
+C:\Users\saint\Desktop\Files\etsu\SE1\Implementation\SE1_ImpLab\SE1_ImpLab\bin\Debug\net7.0\SE1_ImpLab.deps.json
+C:\Users\saint\Desktop\Files\etsu\SE1\Implementation\SE1_ImpLab\SE1_ImpLab\bin\Debug\net7.0\SE1_ImpLab.runtimeconfig.json
+C:\Users\saint\Desktop\Files\etsu\SE1\Implementation\SE1_ImpLab\SE1_ImpLab\bin\Debug\net7.0\SE1_ImpLab.dll
+C:\Users\saint\Desktop\Files\etsu\SE1\Implementation\SE1_ImpLab\SE1_ImpLab\bin\Debug\net7.0\SE1_ImpLab.pdb
+C:\Users\saint\Desktop\Files\etsu\SE1\Implementation\SE1_ImpLab\SE1_ImpLab\obj\Debug\net7.0\SE1_ImpLab.csproj.AssemblyReference.cache
+C:\Users\saint\Desktop\Files\etsu\SE1\Implementation\SE1_ImpLab\SE1_ImpLab\obj\Debug\net7.0\SE1_ImpLab.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\saint\Desktop\Files\etsu\SE1\Implementation\SE1_ImpLab\SE1_ImpLab\obj\Debug\net7.0\SE1_ImpLab.AssemblyInfoInputs.cache
+C:\Users\saint\Desktop\Files\etsu\SE1\Implementation\SE1_ImpLab\SE1_ImpLab\obj\Debug\net7.0\SE1_ImpLab.AssemblyInfo.cs
+C:\Users\saint\Desktop\Files\etsu\SE1\Implementation\SE1_ImpLab\SE1_ImpLab\obj\Debug\net7.0\SE1_ImpLab.csproj.CoreCompileInputs.cache
+C:\Users\saint\Desktop\Files\etsu\SE1\Implementation\SE1_ImpLab\SE1_ImpLab\obj\Debug\net7.0\SE1_ImpLab.dll
+C:\Users\saint\Desktop\Files\etsu\SE1\Implementation\SE1_ImpLab\SE1_ImpLab\obj\Debug\net7.0\refint\SE1_ImpLab.dll
+C:\Users\saint\Desktop\Files\etsu\SE1\Implementation\SE1_ImpLab\SE1_ImpLab\obj\Debug\net7.0\SE1_ImpLab.pdb
+C:\Users\saint\Desktop\Files\etsu\SE1\Implementation\SE1_ImpLab\SE1_ImpLab\obj\Debug\net7.0\SE1_ImpLab.genruntimeconfig.cache
+C:\Users\saint\Desktop\Files\etsu\SE1\Implementation\SE1_ImpLab\SE1_ImpLab\obj\Debug\net7.0\ref\SE1_ImpLab.dll

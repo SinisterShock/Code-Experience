@@ -1,0 +1,97 @@
+﻿@model NewPartsGalore.Models.Entities.ProductBundle
+
+
+@{
+    var product = Model!.Product;
+    var bundle = Model!.Bundle;
+    ViewData["Title"] = $"Removing {product.Name}";
+    var question = $"Are you sure you want to remove this product from {bundle!.Name}?";
+}
+
+<head>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .content-wrapper {
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 15px;
+            padding: 55px;
+        }
+
+        
+
+
+        /* Style the table */
+        .table {
+            width: 100%;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+            .table th,
+            .table td {
+                padding: 0.75rem;
+                vertical-align: top;
+                border-top: 1px solid #dee2e6;
+            }
+
+            .table thead th {
+                vertical-align: bottom;
+                border-bottom: 2px solid #dee2e6;
+                background-color: #f8f9fa; /* Header background color */
+            }
+
+            /* Alternating row colors */
+            .table tbody tr:nth-of-type(odd) {
+                background-color: rgba(0, 0, 0, 0.05); /* Light gray background */
+            }
+
+            /* Hover effect on rows */
+            .table tbody tr:hover {
+                background-color: rgba(0, 0, 0, 0.075); /* Slightly darker background on hover */
+            }
+
+            /* Action links style */
+            .table a {
+                color: #007bff; /* Bootstrap primary link color */
+                text-decoration: none;
+            }
+
+                .table a:hover {
+                    text-decoration: underline;
+                }
+
+        .container {
+            display: flex;
+        }
+
+        .left-column {
+            flex: 1;
+            text-align: left;
+            /*vertical-align: bottom;*/
+        }
+
+        .right-column {
+            flex: 1;
+            /*vertical-align: bottom;*/
+            text-align: left;
+        }
+
+    </style>
+</head>
+<h2 style="text-align: center">@ViewData["Title"]</h2>
+<div class="content-wrapper">
+    <h3>@question</h3>
+    <div>
+        <form asp-action="Remove" id="formRemove">
+            <input type="hidden" name="productBundleId" value="@Model!.Id" />
+            <input type="hidden" name="id" value="@product!.Id" />
+            <input type="submit" value="Yes, Remove From Bundle" class="btn btn-danger" />
+            <a asp-action="Details" asp-controller="Product" class="btn btn-primary" asp-route-id="@product.Id">
+                Back to Product Details
+            </a>
+        </form>
+    </div>
+</div>
+

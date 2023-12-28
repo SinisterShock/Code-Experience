@@ -1,0 +1,21 @@
+﻿@model TBBookAuthorApp.Models.ViewModels.DeleteAuthorVm
+
+@{
+    var book = (Book?)ViewData["Book"];
+    ViewData["Title"] = $"Deleting author {Model.FirstName} {Model.LastName} from {book!.Title}";
+    ViewData["Delete"] = $"You are about to delete {Model.FirstName} {Model.LastName}. Are you sure?";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<h3>@ViewData["Delete"]</h3>
+<div>
+    <hr />
+    
+    <form asp-action="Delete">
+        <input type="hidden" value="@book.Id" name="bookId" />
+        <input type="hidden" value="@Model.Id" name="authorId" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-action="Details" asp-controller="Book" asp-route-id="@book.Id">Back to Book Details</a>
+    </form>
+</div>

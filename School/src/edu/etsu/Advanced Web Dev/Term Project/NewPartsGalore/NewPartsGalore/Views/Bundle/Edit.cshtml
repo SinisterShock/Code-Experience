@@ -1,0 +1,203 @@
+﻿@model NewPartsGalore.Models.Entities.Bundle
+
+@{
+    ViewData["Title"] = $"Modifying {Model.Name}";
+}
+<head>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .content-wrapper {
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 15px;
+            padding: 55px;
+        }
+
+        /* Style the table */
+        .table {
+            width: 100%;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+            .table th,
+            .table td {
+                padding: 0.75rem;
+                vertical-align: top;
+                border-top: 1px solid #dee2e6;
+            }
+
+            .table thead th {
+                vertical-align: bottom;
+                border-bottom: 2px solid #dee2e6;
+                background-color: #f8f9fa; /* Header background color */
+            }
+
+            /* Alternating row colors */
+            .table tbody tr:nth-of-type(odd) {
+                background-color: rgba(0, 0, 0, 0.05); /* Light gray background */
+            }
+
+            /* Hover effect on rows */
+            .table tbody tr:hover {
+                background-color: rgba(0, 0, 0, 0.075); /* Slightly darker background on hover */
+            }
+
+            /* Action links style */
+            .table a {
+                color: #007bff; /* Bootstrap primary link color */
+                text-decoration: none;
+            }
+
+                .table a:hover {
+                    text-decoration: underline;
+                }
+
+        .container {
+            display: flex;
+        }
+
+        .left-column {
+            flex: 1;
+            text-align: left;
+            vertical-align: bottom;
+        }
+
+        .right-column {
+            flex: 1;
+            vertical-align: bottom;
+            text-align: right;
+        }
+
+    </style>
+
+</head>
+
+<div class="content-wrapper">
+    <h1>@ViewData["Title"]</h1>
+
+    <hr />
+    <div class="row">
+        <div class="col-md-4">
+            <form asp-action="Edit">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="Id" class="control-label"></label>
+                    <input asp-for="Id" readonly class="form-control" />
+                    <span asp-validation-for="Id" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="SerialNumber" class="control-label"></label>
+                    <input asp-for="SerialNumber" class="form-control" />
+                    <span asp-validation-for="SerialNumber" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Name" class="control-label"></label>
+                    <input asp-for="Name" class="form-control" />
+                    <span asp-validation-for="Name" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Description" class="control-label"></label>
+                    <input asp-for="Description" class="form-control" />
+                    <span asp-validation-for="Description" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Price" class="control-label"></label>
+                    <input asp-for="Price" class="form-control" />
+                    <span asp-validation-for="Price" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Save" class="btn btn-success" />
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div>
+        <a asp-action="Index"class="btn btn-primary">Back to List</a>
+    </div>
+</div>
+@if (Model.ProductBundles.Count() > 0)
+{
+    <div class="content-wrapper">
+        <h3>Assigned Products</h3>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>
+                        Product Code
+                    </th>
+                    <th>
+                        Serial Number
+                    </th>
+                    <th>
+                        Name
+                    </th>
+                    <th>
+                        Description
+                    </th>
+                    <th>
+                        Price
+                    </th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model.ProductBundles)
+                {
+                    <tr>
+                        <td>
+                            @item!.Product.Id
+                        </td>
+                        <td>
+                            @item!.Product.SerialNumber
+                        </td>
+                        <td>
+                            @item!.Product.Name
+                        </td>
+                        <td>
+                            @item!.Product.Description
+                        </td>
+                        <td>
+                            @String.Format("{0:C}", item.Product.Price)
+                        </td>
+                        <td>
+
+                            <a class="btn btn-danger" style="text-decoration: none; color: white" asp-action="RemoveProduct" asp-controller="ProductBundle" asp-route-id="@item!.Product.Id" asp-route-bundleId="@Model!.Id">Remove Product</a>
+
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+}
+<div class="content-wrapper">
+
+    <h3>
+        Remove this Bundle
+        <button class="btn btn-danger" onclick="confirmDelete(@Model.Id)">Remove</button>
+    </h3>
+    
+
+</div>
+
+<script>
+    // JavaScript function to show a confirmation popup and redirect if confirmed
+    function confirmDelete(bundleId) {
+        var confirmation = confirm("Are you sure you want to remove this bundle?");
+        if (confirmation) {
+            // Redirect to the DeleteConfirmed action with the bundle ID
+            window.location.href = "/Bundle/DeleteConfirmed/" + bundleId;
+        }
+    }
+
+</script>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

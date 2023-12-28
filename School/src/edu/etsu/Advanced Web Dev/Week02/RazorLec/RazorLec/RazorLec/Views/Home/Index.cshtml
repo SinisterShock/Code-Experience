@@ -1,0 +1,64 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+<!-- This is a client side comment-HTML -->
+@* This is the server side comment- Razor *@
+
+Some text
+
+
+@{
+    string greet = "hello";
+    char gender = 'M';
+    double val = 12.3;
+    val *= 100;
+}
+
+@*Inline Expression*@
+<p>greet gender</p>
+<p>@greet Tyler. You are @gender. Value is @val</p>
+
+@*Code and Markup*@
+@if(gender == 'M'){
+    <h3>Male</h3>
+}else{
+    <h3>Other</h3>
+}
+
+@for(int i =0; i <=20; i++){
+    <span>@i</span>
+}
+
+@{
+    string[] names = { "Tyler", "Alecia", "Gary", "Olivia" };
+}
+
+<ul>
+    @foreach(var n in names)
+    {
+        <li>@n</li>
+    }
+</ul>
+
+@{
+    var foo = true;
+    var bar = "Some Value";
+}
+@if(foo){
+    <text>Plain Text</text>
+}
+<br />
+@if(foo){
+    @:Plain Text 2
+}
+<br />
+@*Explicit Expression*@
+345 * 67 % 34 = @(345 * 67 % 34)
+<br />
+<p>@ViewData["Key1"]</p>
+<p>@ViewBag.Key1</p>
+<p>@ViewData["Key2"]</p>
+<p>@ViewBag.Key2</p>
+<partial name="_MyPartialView" />
+<br />
+@await Component.InvokeAsync("Time")

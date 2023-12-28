@@ -1,0 +1,15 @@
+﻿@{
+    ViewData["Title"] = "Range Input";
+}
+<h2>@ViewData["Title"]</h2>
+
+<div>
+    Select a number:
+    <input type="range" name="rangeNumber" id="rangeInput" />
+    <input type="number" id="rangeDisplay" readonly disabled />
+    <input type="number" id="rangeDisplay2" readonly disabled />
+</div>
+
+@section Scripts{
+    <script src="~/js/RangeInput.js"></script>
+}

@@ -1,0 +1,44 @@
+﻿@model TBJavaScriptIntro.Models.ViewModels.MilesPerGallonVM
+
+@{
+    ViewData["Title"] = "MilesPerGallon";
+}
+
+<h1>MilesPerGallon</h1>
+
+<h4>MilesPerGallonVM</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="MilesPerGallon">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="LitersUsed" class="control-label"></label>
+                <input asp-for="LitersUsed" class="form-control" id="LitersUsed" />
+                <span asp-validation-for="LitersUsed" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MilesTraveled" class="control-label"></label>
+                <input asp-for="MilesTraveled" class="form-control" id="MilesTraveled"/>
+                <span asp-validation-for="MilesTraveled" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MilesPerGallon" class="control-label"></label>
+                <input asp-for="MilesPerGallon" class="form-control" id="milesPerGallon" readonly />
+                <span asp-validation-for="MilesPerGallon" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input value="Calculate" id="calculateBtn" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    <script src="~/js/Milespergallon.js"></script>
+}

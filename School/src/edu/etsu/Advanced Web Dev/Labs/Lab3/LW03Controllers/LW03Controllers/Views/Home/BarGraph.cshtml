@@ -1,0 +1,35 @@
+﻿@model string[]
+@{
+    ViewData["Title"] = "BarGraph";
+}
+
+<h2>@ViewData["Title"]</h2>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <td>Item</td>
+            <td>Graph</td>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var value in Model)
+        {
+            <tr>
+                <td>
+                    @{
+                        var record = value.Split("~");
+                        var itemName = record[0];
+                        var amount = Int32.Parse(record[1]);
+                        @itemName
+                    }
+                </td>
+                <td>
+                    @for (int i = 0; i < amount; i++)
+                    {
+                        <span>&equiv;</span>
+                    }
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

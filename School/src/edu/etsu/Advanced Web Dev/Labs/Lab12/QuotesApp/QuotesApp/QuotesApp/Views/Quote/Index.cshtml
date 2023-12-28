@@ -1,0 +1,58 @@
+﻿@model IEnumerable<QuotesApp.Models.Entities.Quote>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#createQuoteModal" Modal Start>Create New</button>
+<partial name="_CreateQuoteModal" model="@Model">
+
+
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TheQuote)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.WhoSaidIt)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody id="quoteTableBody">
+@*@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TheQuote)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.WhoSaidIt)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            </td>
+        </tr>
+}*@
+    </tbody>
+</table>
+
+@section Scripts{
+    <script src="~/js/quoteIndex.js" type="module"></script>
+        @{
+            await Html.RenderPartialAsync("_ValidationScriptsPartial");
+        }
+    
+}

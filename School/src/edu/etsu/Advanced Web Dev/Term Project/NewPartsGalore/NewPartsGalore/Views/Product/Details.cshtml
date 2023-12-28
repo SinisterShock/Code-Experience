@@ -1,0 +1,262 @@
+﻿@using NewPartsGalore.Models.Entities;
+@model NewPartsGalore.Models.Entities.Product
+
+@{
+    ViewData["Alter"] = $"Edit {Model.Name}";
+    ViewData["Title"] = $"{Model.Name} Information";
+    var location = (Location?)ViewData["location"];
+
+}
+
+<head>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .content-wrapper {
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 15px;
+            padding: 55px;
+        }
+
+        /*.container dl dt {
+                    display: inline-block;
+                    min-width: 100px;
+                    width: auto;
+                    font-weight: bold;
+                }*/
+
+        /*.container dl dd {
+                    display: inline-block;
+                    vertical-align: top;
+                    margin-left: 130px;
+                }*/
+
+
+        /* Style the table */
+        .table {
+            width: 100%;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+            .table th,
+            .table td {
+                padding: 0.75rem;
+                vertical-align: top;
+                border-top: 1px solid #dee2e6;
+            }
+
+            .table thead th {
+                vertical-align: bottom;
+                border-bottom: 2px solid #dee2e6;
+                background-color: #f8f9fa; /* Header background color */
+            }
+
+            /* Alternating row colors */
+            .table tbody tr:nth-of-type(odd) {
+                background-color: rgba(0, 0, 0, 0.05); /* Light gray background */
+            }
+
+            /* Hover effect on rows */
+            .table tbody tr:hover {
+                background-color: rgba(0, 0, 0, 0.075); /* Slightly darker background on hover */
+            }
+
+            /* Action links style */
+            .table a {
+                color: #007bff; /* Bootstrap primary link color */
+                text-decoration: none;
+            }
+
+                .table a:hover {
+                    text-decoration: underline;
+                }
+
+        .container {
+            display: flex;
+        }
+
+        .left-column {
+            flex: 1;
+            text-align: left;
+            /*vertical-align: bottom;*/
+        }
+
+        .right-column {
+            flex: 1;
+            /*vertical-align: bottom;*/
+            text-align: left;
+        }
+
+    </style>
+
+</head>
+<div class="content-wrapper">
+    <h1 style="text-align: center">@ViewData["Title"]</h1>
+    <div>
+        <hr />
+        <dl class="row">
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Id)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Id)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.SerialNumber)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.SerialNumber)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Name)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Name)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Description)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Description)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Price)
+            </dt>
+            <dd class="col-sm-10">
+                @String.Format("{0:C}", Model.Price)
+            </dd>
+            <dt class="col-sm-2">
+                Bundle Count
+            </dt>
+            <dd class="col-sm-10">
+                @Model.ProductBundles.Count()
+            </dd>
+        </dl>
+    </div>
+    <div>
+        <button class="btn btn-primary">
+            <a style="text-decoration: none; color: white" asp-action="Index">Back to List</a>
+        </button>
+        <button class="btn btn-warning">
+            <a style="text-decoration: none; color: white" asp-action="Edit" asp-controller="Product" asp-route-id="@Model.Id">Edit</a>
+        </button>
+
+        <button class="btn btn-success">
+            <a style="text-decoration: none; color: white" asp-action="AsignBundle" asp-controller="Bundle" asp-route-id="@Model.Id">Asign to Bundle</a>
+        </button>
+
+    </div>
+</div>
+
+<div class="content-wrapper">
+    <h1 style="text-align: center">Product Details</h1>
+    <hr />
+    <div class="container">
+        <div class="col-md-4">
+            <h2>Product Location</h2>
+            <dl class="row">
+
+                <dt class="col-sm-6">
+                    Location Code
+                </dt>
+                <dd class="col-sm-6">
+                    @location.Id
+                </dd>
+                <dt class="col-sm-6">
+                    Name
+                </dt>
+                <dd class="col-sm-6">
+                    @location.Name
+                </dd>
+                <dt class="col-sm-6">
+                    Store Type
+                </dt>
+                <dd class="col-sm-6">
+                    @location.StoreType
+                </dd>
+                <dt class="col-sm-6">
+                    Address
+                </dt>
+                <dd class="col-sm-6">
+                    @location.Address
+                </dd>
+                <dt class="col-sm-6">
+                    City
+                </dt>
+                <dd class="col-sm-6">
+                    @location.City
+                </dd>
+                <dt class="col-sm-6">
+                    State
+                </dt>
+                <dd class="col-sm-6">
+                    @location.State
+                </dd>
+                <dt class="col-sm-6">
+                    Zip Code
+                </dt>
+                <dd class="col-sm-6">
+                    @location.Zip
+                </dd>
+            </dl>
+        </div>
+        @if (Model.ProductBundles.Count() > 0)
+        {
+            <div class="col-md-10">
+                <h3>Assigned Bundles</h3>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>
+                                Product Code
+                            </th>
+                            <th>
+                                Serial Number
+                            </th>
+                            <th>
+                                Name
+                            </th>
+                            <th>
+                                Description
+                            </th>
+                            <th>
+                                Price
+                            </th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model.ProductBundles)
+                        {
+                            <tr>
+                                <td>
+                                    @item!.Bundle.Id
+                                </td>
+                                <td>
+                                    @item!.Bundle.SerialNumber
+                                </td>
+                                <td>
+                                    @item!.Bundle.Name
+                                </td>
+                                <td>
+                                    @item!.Bundle.Description
+                                </td>
+                                <td>
+                                    @String.Format("{0:C}", item.Bundle.Price)
+                                </td>
+                                <td>
+
+                                    <a class="btn btn-success" style="text-decoration: none; color: white" asp-action="Details" asp-controller="Bundle" asp-route-id="@item!.Bundle.Id">Details</a>
+
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+
+        }
+    </div>
+</div>

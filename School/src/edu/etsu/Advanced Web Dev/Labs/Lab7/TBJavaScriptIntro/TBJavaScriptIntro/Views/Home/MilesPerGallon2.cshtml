@@ -1,0 +1,39 @@
+﻿<h1>@ViewData["Title"]</h1>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form id="milesPerGallonForm">
+            <div class="form-group">
+                <label for="litersUsed" class="control-label">Liters used</label>
+                <input id="litersUsed" name="litersUsed" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label for="milesTraveled" class="control-label">Miles traveled</label>
+                <input id="milesTraveled" name="milesTraveled" class="form-control" />
+            </div>
+            <div class="form-group">
+                <input value="Calculate" id="calculateBtn" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+<table class="table" id="milesPerGallonTable">
+    <thead>
+        <tr>
+            <th>
+                Liters Used
+            </th>
+            <th>
+                Miles Traveled
+            </th>
+            <th>
+                Miles per Gallon
+            </th>
+        </tr>
+    </thead>
+    <tbody id="mpgTableBody">
+    </tbody>
+</table>
+@section Scripts {
+    <script src="~/js/homeMilesPerGallon2.js"></script>
+}

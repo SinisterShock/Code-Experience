@@ -1,0 +1,49 @@
+﻿@model IEnumerable<BookAuthorApp.Models.ViewModels.BookDetailsVM>
+
+@{
+    ViewData["Title"] = "List of Books";
+}
+
+<h1>Books List</h1>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Title)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PublicationYear)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NumberOfAuthors)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PublicationYear)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NumberOfAuthors)
+            </td>
+            <td>
+                    <a asp-action="AssignAuthor" asp-controller="BookAuthor" asp-route-id="@item.Id">Assign Author</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

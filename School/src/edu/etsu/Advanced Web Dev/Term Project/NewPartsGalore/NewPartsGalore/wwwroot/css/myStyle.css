@@ -1,0 +1,41 @@
+﻿<style >
+.body {
+    background-color: #d1f1f1; /* Set the background color of the body fae8b7  edebe3*/
+}
+
+
+/* Top Navigation Bar */
+.navbar {
+    background-color: #343a40; /* Set the background color of the top bar */
+    box-shadow: 0 4px 8px rgba(52, 58, 64, 0.1), 0 0 10px rgba(52, 58, 64, 0.2), 0 0 20px rgba(52, 58, 64, 0.3);
+}
+
+/* Sidebar */
+#sidebar {
+    background-color: #343a40 !important; /* Set the background color of the sidebar */
+    color: #fff; /* Set the text color of the sidebar */
+    position: fixed;
+    top: 56px; /* Adjust based on the height of your top bar */
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 0.5rem; /* Adjust as needed */
+    padding-right: 0.5rem; /* Adjust as needed */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Main Content Area */
+.main-content {
+    margin-left: 250px; /* Adjust based on the width of your sidebar */
+    padding: 15px;
+}
+
+/* Logo styles */
+.navbar-brand img {
+    height: 30px; /* Adjust the height of the image as needed */
+    margin-right: 10px; /* Adjust the margin as needed to separate the image from text */
+}
+
+</style >

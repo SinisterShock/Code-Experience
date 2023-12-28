@@ -1,0 +1,104 @@
+﻿@{
+    ViewData["Title"] = "Quotes API";
+}
+
+<h1>Welcome to the @ViewData["Title"]</h1>
+A Quote JSON object is represented by:
+<code><pre>
+    {
+        "id":&lt;integer&gt;,
+        "theQuote":&lt;text&gt;,
+        "whoSaidIt":&lt;text&gt;,
+    }
+</pre>
+</code>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                API
+            </th>
+            <th>
+                Description
+            </th>
+            <th>
+                Request Body
+            </th>
+            <th>
+                Response Body (JSON)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                GET /api/quote/all
+            </td>
+            <td>
+                Get all quotes
+            </td>
+            <td>
+                None
+            </td>
+            <td>
+                Array of Quotes
+            </td>
+        </tr>
+        <tr>
+            <td>
+                GET /api/quote/one/<b>{id}</b>
+            </td>
+            <td>
+                Get one quote
+            </td>
+            <td>
+                None
+            </td>
+            <td>
+                Quote object
+            </td>
+        </tr>
+        <tr>
+            <td>
+                POST /api/quote/create
+            </td>
+            <td>
+                Add a new Quote
+            </td>
+            <td>
+                Quote form-data
+            </td>
+            <td>
+                Quote object
+            </td>
+        </tr>
+        <tr>
+            <td>
+                PUT /api/quote/update
+            </td>
+            <td>
+                Updates an existing Quote
+            </td>
+            <td>
+                Quote form-data
+            </td>
+            <td>
+                None
+            </td>
+        </tr>
+        <tr>
+            <td>
+                DELETE /api/quote/delete/<b>{id}</b>
+            </td>
+            <td>
+                Deletes one quote
+            </td>
+            <td>
+                None
+            </td>
+            <td>
+                None
+            </td>
+        </tr>
+    </tbody>
+</table>
