@@ -1,0 +1,35 @@
+pipeline {
+    agent any
+    environment {
+        DOCKER_HOST = 'unix:///var/run/docker.sock'
+    }
+    stages {
+        stage('Clone the repo') {
+            steps {
+                echo 'Clone the repo'
+                sh 'rm -fr Bucstop_Release'
+                sh 'git clone https://github.com/ChickenContenders/Bucstop_Release.git'
+            }
+        }
+        stage('Stop the old container') {
+            steps {
+                echo 'Attempting to stop Bucstop'
+                sh '''
+                    cd Bucstop_Release
+                    sudo docker stop bucstop_Release
+                '''
+            }
+        }
+        stage('Build and Create Container') {
+            steps {
+                echo 'Building Docker image from the cloned repo and creating a new container'
+                sh '''
+                    cd Bucstop_Release
+                    sudo docker build -t burlesont1/bucstop .
+                    sudo docker run -d --name bucstop_NewRelease -p 80:80 -p 443:443 burlesont1/bucstop
+                '''
+            }
+        }
+        
+    }
+}
