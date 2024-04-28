@@ -14,5 +14,7 @@
 - Unix
 - Xamarin
 - Batch Scripts
+- PowerShell
+- R
 - Excel Macro Scripts from VBA
 - MYSQL (Remnants of old assignments unfortunately lost)
