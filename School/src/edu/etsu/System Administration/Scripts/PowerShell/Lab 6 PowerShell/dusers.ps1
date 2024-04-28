@@ -1,0 +1,1 @@
+Import-Csv users.csv | foreach-object { remove-aduser -Identity $_.SamAccountName -Confirm:$false }

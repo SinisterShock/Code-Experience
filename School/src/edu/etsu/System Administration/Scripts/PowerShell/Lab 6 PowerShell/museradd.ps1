@@ -1,0 +1,1 @@
+Import-Csv users.csv | New-ADUser -PassThru | Set-ADAccountPassword -Reset -NewPassword (ConvertTo-SecureString -AsPlainText 'Passw0rd!' -Force) -PassThru | Enable-ADAccount 
